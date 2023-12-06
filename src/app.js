@@ -13,9 +13,11 @@ function add() {
   if (inputValue !== "") {
     const content = document.createElement('div');
     content.innerHTML = `
+    <div class="float-right">
     <p>You</p>
-    <p class="bg-[#93C2ED] rounded-lg text-white">${inputValue}</p>`;
-    document.getElementById('your-text').appendChild(content);
+    <p class="bg-[#93C2ED] rounded-lg text-white">${inputValue}</p>
+    </div>`;
+    document.getElementById('text').appendChild(content);
     const url = `https://api.api-ninjas.com/v1/loremipsum?paragraphs=?&max_length=${maxLength}`;
     fetch(url, options)
       .then((res) => res.json())
@@ -28,9 +30,11 @@ function add() {
 function apiData(text) {
   const content = document.createElement('div');
   content.innerHTML = `
+  <div class="float-left">
   <p>Victor</p>
   <p class="bg-[#85BB71] rounded-lg text-white">
   ${text}
-  </p>`;
+  </p>
+  </div>`;
   document.getElementById("text").appendChild(content);
 }

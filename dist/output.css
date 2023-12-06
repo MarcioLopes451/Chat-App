@@ -690,6 +690,10 @@ video {
   gap: 200px;
 }
 
+.overflow-scroll {
+  overflow: scroll;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -760,6 +764,11 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.px-\[8px\] {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .pt-5 {
