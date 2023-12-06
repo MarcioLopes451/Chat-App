@@ -1,18 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/dist/output.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
     <title>Document</title>
-</head>
-<body>
-    <input type="text" placeholder="search..." id="placeholder" class="border border-red-600">
-    <button onclick="add()">Click</button>
+  </head>
+  <body class="bg-[#F2F5F8]">
+    <div class="w-full bg-[#F2F5F8] relative">
+      <!--mobile nav for contacts-->
+      <div class="w-[190px] bg-[#444753] absolute hidden">busdfbusdfbuei</div>
 
-    <div id="text">
-        
+      <!--chat section-->
+      <section class="relative">
+        <!--user names-->
+        <div class="p-5">
+          <div class="flex items-center gap-5 justify-between">
+            <div class="flex items-center gap-2">
+              <img
+                src="images/man.png"
+                alt="victor"
+                class="w-[100px] h-[100px]"
+              />
+              <div class="flex flex-col">
+                <h2 class="font-semibold text-xl">Victor Moses</h2>
+                <p class="text-xs">906 Messages</p>
+              </div>
+            </div>
+            <img
+              src="images/216411_star_icon.png"
+              alt="star"
+              class="w-[30px] h-[30px]"
+            />
+          </div>
+        </div>
+
+        <!--chat-->
+        <div class="mt-5 border-t-[10px] border-white">
+          <div>
+            <!--your text-->
+            <div class="w-[228px] float-right pr-[38px]" id="your-text">
+              
+            </div>
+            <!--user text-->
+            <div class="w-[228px] float-left pl-[8px]" id="text">
+
+            </div>
+          </div>
+        </div>
+
+        <!--send message-->
+        <div class="border-t-[10px] border-white absolute top-[650px] w-full">
+          <div class="flex flex-col justify-center items-center">
+            <input
+              type="text"
+              placeholder="Type Your Message..."
+              id="placeholder"
+              class="mt-5 w-[300px] h-[100px] placeholder:fixed"
+            />
+            <div class="flex justify-between items-center gap-[200px] mt-5">
+                <div class="flex gap-2">
+                    <img src="images/290138_document_extension_file_format_paper_icon.png" class="w-[30px] h-[30px]"/>
+                    <img src="images/3643765_image_landscape_painting_photo_picture_icon.png" class="w-[30px] h-[30px]"/>
+                </div>
+                <button onclick="add()" class="font-semibold text-[#93C2ED] uppercase">send</button>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
+
+<!--<input type="text" placeholder="search..." id="placeholder" class="border border-red-600">
+    <button onclick="add()">send</button>
+
+    <div id="text">
+
+    </div>-->
