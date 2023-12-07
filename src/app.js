@@ -14,7 +14,7 @@ function add() {
     const content = document.createElement("div");
     const timestamp = new Date();
     content.innerHTML = `
-    <div class="float-right w-[200px] mt-5">
+    <div class="mt-5 float-right w-[250px] lg:w-[350px]">
     <div class="flex justify-between items-center">
     <p class="text-[#696C75] text-xs">${timeAndDate(timestamp)}</p>
     <p>You</p>
@@ -46,7 +46,7 @@ function apiData(text) {
   const content = document.createElement("div");
   const timestamp = new Date();
   content.innerHTML = `
-  <div class="float-left mt-5">
+  <div class="mt-5 float-left w-[250px] lg:w-[350px]">
   <div class="flex justify-between items-center">
   <p>Victor</p>
   <p class="text-[#696C75] text-xs">${timeAndDate(timestamp)}</p>
@@ -61,14 +61,14 @@ function apiData(text) {
 
 function mobileMenu() {
     const menu = document.getElementById("menu");
-    if (menu.style.display === "none") {
-      menu.style.display = "block";
-    } 
+    menu.classList.toggle('hidden')
 }
+document.getElementById('mobileMenu').addEventListener('click', mobileMenu)
 
 function closeMenu(){
     const menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } 
+    if(menu.classList.toggle('block')){
+        menu.classList.toggle('hidden')
+    }
 }
+
