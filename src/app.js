@@ -9,11 +9,10 @@ let options = {
 function add() {
   const input = document.getElementById("placeholder");
   const inputValue = input.value.trim();
-  
 
   if (inputValue !== "") {
-    const content = document.createElement('div');
-    const timestamp = new Date()
+    const content = document.createElement("div");
+    const timestamp = new Date();
     content.innerHTML = `
     <div class="float-right w-[200px] mt-5">
     <div class="flex justify-between items-center">
@@ -22,30 +21,30 @@ function add() {
     </div>
     <p class="bg-[#93C2ED] rounded-lg text-white p-3">${inputValue}</p>
     </div>`;
-    document.getElementById('text').appendChild(content);
-    scrollToBottom()
+    document.getElementById("text").appendChild(content);
+    scrollToBottom();
     const url = `https://api.api-ninjas.com/v1/loremipsum?paragraphs=?&max_length=${maxLength}`;
     fetch(url, options)
       .then((res) => res.json())
       .then((data) => apiData(data.text))
       .catch((err) => console.error(err));
-      input.value = ''
+    input.value = "";
   }
 }
 
-function timeAndDate(timestamp){
-const options = {hour : 'numeric', minute: 'numeric', weekday:'long'};
-return new Date(timestamp).toLocaleString('en-GB', options)
+function timeAndDate(timestamp) {
+  const options = { hour: "numeric", minute: "numeric", weekday: "long" };
+  return new Date(timestamp).toLocaleString("en-GB", options);
 }
 
-function scrollToBottom(){
-    const chat = document.getElementById('chat');
-    chat.scrollTop = chat.scrollHeight
+function scrollToBottom() {
+  const chat = document.getElementById("chat");
+  chat.scrollTop = chat.scrollHeight;
 }
 
 function apiData(text) {
-  const content = document.createElement('div');
-  const timestamp = new Date()
+  const content = document.createElement("div");
+  const timestamp = new Date();
   content.innerHTML = `
   <div class="float-left mt-5">
   <div class="flex justify-between items-center">
@@ -57,5 +56,19 @@ function apiData(text) {
   </p>
   </div>`;
   document.getElementById("text").appendChild(content);
-  scrollToBottom()
+  scrollToBottom();
+}
+
+function mobileMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "none") {
+      menu.style.display = "block";
+    } 
+}
+
+function closeMenu(){
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "block") {
+      menu.style.display = "none";
+    } 
 }

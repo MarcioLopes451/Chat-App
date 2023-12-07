@@ -9,13 +9,184 @@
   <body class="bg-[#F2F5F8]">
     <div class="w-full bg-[#F2F5F8] relative">
       <!--mobile nav for contacts-->
-      <div class="w-[190px] bg-[#444753] absolute hidden">busdfbusdfbuei</div>
+      <div
+        class="w-[270px] bg-[#444753] absolute h-[100vh] z-50"
+        id="menu"
+        style="display: none"
+      >
+        <div class="mt-5 mx-4">
+          <!--search bar-->
+          <div class="flex justify-between items-center">
+            <div class="bg-[#696C75] w-[190px] h-full py-3">
+              <div class="flex items-center justify-between px-2">
+                <h3 class="font-semibold text-white">Search</h3>
+                <img
+                  src="images/211817_search_strong_icon (2).png"
+                  alt="search"
+                  class="w-[30px] h-[30px]"
+                />
+              </div>
+            </div>
+            <img
+              src="images/3671739_close_solid_icon.png"
+              alt="close"
+              class="w-[30px] h-[30px]"
+              id="close"
+              onclick="closeMenu()"
+            />
+          </div>
+
+          <!--contact lists-->
+          <div class="mt-8">
+            <div class="flex flex-col items-start gap-7">
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/man.png"
+                  alt="victor"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Victor Moses</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon.png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    online
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/man (1).png"
+                  alt="Michael"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Michael Ward</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon (1).png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    offline 10 mins ago
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/woman.png"
+                  alt="Susan"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Susan Bale</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon.png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    online
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/security-guard.png"
+                  alt="Work"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Work Manager</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon.png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    online
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/bartender.png"
+                  alt="Richardson"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Richardson Kali</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon (1).png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    offline 1 hrs ago
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/doctors-office.png"
+                  alt="Dr"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Dr. Alberto</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon (1).png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    offline 5 hrs ago
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <img
+                  src="images/bride.png"
+                  alt="Wife"
+                  class="w-[70px] h-[70px]"
+                />
+                <div class="font-semibold">
+                  <h3 class="text-white">Wife</h3>
+                  <p class="flex items-center gap-2 text-[#ABABAB]">
+                    <img
+                      src="images/2203520_circle_dot_record_round_icon.png"
+                      alt="status"
+                      class="w-[10px] h-[10px]"
+                    />
+                    online
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!--chat section-->
       <section class="relative">
         <!--user names-->
         <div class="p-5">
           <div class="flex items-center gap-5 justify-between">
+            <img
+              src="images/2203523_arrow_back_botton_left_icon.png"
+              alt="menu"
+              class="w-[30px] h-[30px] cursor-pointer"
+              onclick="mobileMenu()"
+            />
             <div class="flex items-center gap-2">
               <img
                 src="images/man.png"
@@ -36,12 +207,13 @@
         </div>
 
         <!--chat-->
-        <div class="mt-5 border-t-[10px] border-white overflow-y-scroll h-[400px]" id="chat">
+        <div
+          class="mt-5 border-t-[10px] border-white overflow-y-scroll h-[400px]"
+          id="chat"
+        >
           <div>
             <!--text-->
-            <div class="w-full px-[8px]" id="text">
-
-            </div>
+            <div class="w-full px-[8px]" id="text"></div>
           </div>
         </div>
 
@@ -55,11 +227,22 @@
               class="mt-5 w-[300px] h-[100px] placeholder:fixed"
             />
             <div class="flex justify-between items-center gap-[200px] mt-5">
-                <div class="flex gap-2">
-                    <img src="images/290138_document_extension_file_format_paper_icon.png" class="w-[30px] h-[30px]"/>
-                    <img src="images/3643765_image_landscape_painting_photo_picture_icon.png" class="w-[30px] h-[30px]"/>
-                </div>
-                <button onclick="add()" class="font-semibold text-[#93C2ED] uppercase">send</button>
+              <div class="flex gap-2">
+                <img
+                  src="images/290138_document_extension_file_format_paper_icon.png"
+                  class="w-[30px] h-[30px]"
+                />
+                <img
+                  src="images/3643765_image_landscape_painting_photo_picture_icon.png"
+                  class="w-[30px] h-[30px]"
+                />
+              </div>
+              <button
+                onclick="add()"
+                class="font-semibold text-[#93C2ED] uppercase"
+              >
+                send
+              </button>
             </div>
           </div>
         </div>
@@ -68,4 +251,3 @@
     <script src="app.js"></script>
   </body>
 </html>
-
