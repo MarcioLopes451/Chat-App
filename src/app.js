@@ -17,7 +17,9 @@ function add() {
     <div class="mt-5 float-right w-[250px] lg:w-[350px]">
     <div class="flex justify-between items-center">
     <p class="text-[#696C75] text-xs">${timeAndDate(timestamp)}</p>
-    <p>You</p>
+    <p>
+    You
+    </p>
     </div>
     <p class="bg-[#93C2ED] rounded-lg text-white p-3">${inputValue}</p>
     </div>`;
@@ -60,15 +62,23 @@ function apiData(text) {
 }
 
 function mobileMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle('hidden')
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
 }
-document.getElementById('mobileMenu').addEventListener('click', mobileMenu)
+document.getElementById("mobileMenu").addEventListener("click", mobileMenu);
 
-function closeMenu(){
-    const menu = document.getElementById("menu");
-    if(menu.classList.toggle('block')){
-        menu.classList.toggle('hidden')
-    }
+function closeMenu() {
+  const menu = document.getElementById("menu");
+  if (menu.classList.toggle("block")) {
+    menu.classList.toggle("hidden");
+  }
 }
 
+let images = ['src/images/216411_star_icon.png','src/images/216411_star_icon (1).png']
+let ind = 0
+
+function changeImage(){
+    let star = document.getElementById('star');
+    ind = (ind + 1) % images.length
+    star.src = images[ind]
+}
